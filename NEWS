@@ -1,0 +1,133 @@
+0.7.0
+    Initial release for Kill Bill 0.20.x
+
+0.6.0
+    Initial release for Kill Bill 0.19.x
+    Enlarge adyen_notifications.psp_reference to 255
+
+0.5.14
+    Make sensitive keys parsing case sensitive
+
+0.5.13
+    Introduce org.killbill.billing.plugin.adyen.paymentProcessorAccountIdToMerchantAccount config property
+    Introduce org.killbill.billing.plugin.adyen.sensitiveProperties config property to filter out sensitive information
+
+0.5.12
+    Introduce fromHPPCompletion plugin property
+    Fix 3DS / HPP payment expiry policy
+
+0.5.11
+    Persist PSP reference when skipGw=true (useful for migrations)
+
+0.5.10
+    PostgreSQL support
+    Invoicing system integration
+    Add option to transform CHARGEBACK into payment failure
+    Add SEPA country code for SEPA requests
+
+0.5.9
+    Add fallback merchant account
+
+0.5.8
+    Add missing config property handler registration
+
+0.5.7
+    Add support for AVS checks in the US
+    Standardize AVS codes
+
+0.5.6
+    Standardize error messages, do not return non-numeric string as error code
+
+0.5.5
+    jdk1.8+ only
+    URLs are now configurable per region
+
+0.5.4
+    [HPP] Only redirect to skipDetails when issuerId is present
+
+0.5.3
+    Make janitor cancellation policy configurable per payment method
+    Update to killbill-oss-parent 0.140.25
+
+0.5.2
+    Add support for QC country code
+    Enlarge md and pa_request columns to TEXT
+    Update to killbill-oss-parent 0.140.21
+
+0.5.1
+    Add expiration period property for pending 3DS payments
+
+0.5.0
+    Initial release for Kill Bill 0.18.x
+
+0.4.10
+    Fix complete call merchant account
+    Enhance error message/code when using admin payment api
+    populate a better default value for psp_result
+    Lookup original transaction's merchant account when completing a 3-DS transaction
+    Populate correctly psp_result for HPP transactions
+
+0.4.9
+    Add support for ELV
+
+0.4.8
+    Add support for skipGw=true property
+    Use auth merchant account for modification transactions by default
+    Better support for chargebacks
+    Bug fixes in notifications handler
+
+0.4.7
+    Fix NoSuchElementException when the payment is unknown to the plugin
+
+0.4.6
+    Implement functionality to expire pending payments
+    Fixes for Analytics
+
+0.4.5
+    Fix split settlements parsing
+    Introduce specific property for selectedBrand value
+
+0.4.4
+    Improve logging
+    Refactor credentials obfuscation
+    Return raw error codes from the schemes
+
+0.4.3
+    No change
+
+0.4.2
+    Store fraud check results, if returned
+    Fix GB vs UK inconsistencies
+
+0.4.1
+    Add support for Easy Encryption
+    Add support for authorization completions
+    Add support for directory lookups
+    Add support for SHA256 signature calculation
+    Add support for multiple merchant accounts per country
+    Various bug fixes
+
+0.4.0
+    Initial release for Kill Bill 0.17.x
+
+0.3.2
+    Adyen client refactoring
+    Fix HPP completion flow with pending payment
+    Fix rounding of Money amounts
+    Improve logging
+
+0.3.1
+    MaestroUK support
+    Chargeback notifications support
+    Handle gracefully bogus notifications
+    serverUrl is now optional (HPP)
+    https://github.com/killbill/killbill-adyen-plugin/issues/44
+
+0.3.0
+    Initial release for Kill Bill 0.16.x
+
+0.2.0
+    Initial release for Kill Bill 0.15.x
+
+0.1.0
+    Initial release for Kill Bill 0.14.x
